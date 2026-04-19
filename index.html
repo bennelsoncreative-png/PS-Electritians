@@ -86,7 +86,10 @@
     .stat-val{ font-size: 26px; }
     .section{ padding: 64px 0; }
     .h2{ font-size: 28px; }
-    .features, .steps, .reviews{ grid-template-columns: 1fr; margin-top: 40px; }
+    .features{ grid-template-columns: repeat(2,1fr); margin-top: 40px; }
+    .steps{ grid-template-columns: 1fr; margin-top: 40px; }
+    .reviews{ grid-template-columns: repeat(2,1fr); margin-top: 40px; }
+    .reviews .review:nth-child(3){ display: none; }
     .final{ padding: 48px 28px; margin: 0 16px 64px; }
     .final h2{ font-size: 30px; line-height: 1.15; }
     .final p{ font-size: 15px; }
