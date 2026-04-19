@@ -26,7 +26,7 @@
     --fg-2: rgb(117,117,117);
   }
   *{ box-sizing: border-box; }
-  html, body{ margin:0; padding:0; background: var(--ink-0); color: var(--fg-0); font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  html, body{ margin:0; padding:0; background: var(--ink-0); color: var(--fg-0); font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   body{ min-width: 360px; }
   a{ color: inherit; text-decoration: none; }
   button{ font: inherit; border: 0; background: none; color: inherit; cursor: pointer; }
@@ -82,14 +82,14 @@
     .wrap{ padding: 0 20px; }
     .h1{ font-size: 36px; }
     .lead{ font-size: 16px; }
-    .stats-inner{ grid-template-columns: repeat(2,1fr); padding: 32px 20px; gap: 28px 16px; }
     .stat-val{ font-size: 26px; }
     .section{ padding: 64px 0; }
     .h2{ font-size: 28px; }
-    .features{ grid-template-columns: repeat(2,1fr); margin-top: 40px; }
+    .features{ grid-template-columns: repeat(2,1fr); margin-top: 40px; width: 100%; gap: 12px; }
     .steps{ grid-template-columns: 1fr; margin-top: 40px; }
-    .reviews{ grid-template-columns: repeat(2,1fr); margin-top: 40px; }
+    .reviews{ grid-template-columns: repeat(2,1fr); margin-top: 40px; width: 100%; gap: 12px; }
     .reviews .review:nth-child(3){ display: none; }
+    .card, .review{ padding: 18px; }
     .final{ padding: 48px 28px; margin: 0 16px 64px; }
     .final h2{ font-size: 30px; line-height: 1.15; }
     .final p{ font-size: 15px; }
@@ -110,6 +110,7 @@
 
   .stats{ background: var(--ink-1); border-top: 1px solid var(--ink-2); border-bottom: 1px solid var(--ink-2); }
   .stats-inner{ display: grid; grid-template-columns: repeat(4,1fr); padding: 44px 24px; gap: 24px; }
+  @media (max-width: 640px){ .stats-inner{ grid-template-columns: repeat(2,1fr); padding: 32px 20px; gap: 28px 16px; } }
   .stat{ text-align: center; }
   .stat-val{ font-weight: 700; font-size: 30.4px; letter-spacing: -0.03em; color: var(--amber); line-height: 1.2; }
   .stat-lbl{ color: var(--fg-1); font-size: 12.8px; margin-top: 4px; }
